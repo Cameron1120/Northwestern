@@ -1,4 +1,4 @@
-INSERT INTO consumption 
+INSERT INTO consumption (consumption_date,dev_id,kwatt)
 VALUES (2023-01-01,101,434),
   (2023-02-01,101,426),
   (2023-03-01,101,409),
@@ -13,20 +13,20 @@ VALUES (2023-01-01,101,434),
   (2022-12-01,101,425);
 
 
-INSERT INTO customer
+INSERT INTO customer (customer_Id,fname,lname,email,state_id)
 VALUES (101,John,Smith,testuser1@example.com,Vermont),
 (102,Jane,Doe,testuser2@example.com,Maine);
 
-INSERT INTO region 
+INSERT INTO region (state_id,region)
 VALUES (Vermont,New England),
 (Maine,New England);
 
 
-INSERT INTO baseline 
+INSERT INTO baseline (dev_id,kwatt)
 VALUES (1,403),
 (2,53);
 
 
-INSERT INTO device
+INSERT INTO device (dev_id,name,customer_Id)
 VALUE (1,Water Heater,101),
 (2,Refrierator,101);
