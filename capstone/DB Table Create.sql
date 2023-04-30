@@ -1,7 +1,8 @@
 Create Table IF NOT EXISTS consumption (
   consumption_date date not null Primary key,
   dev_id int not null,
-  kwatt float
+  kwatt float,
+  c02 float
 );
 
 Create Table IF NOT EXISTS device (
