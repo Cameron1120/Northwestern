@@ -1,29 +1,29 @@
-Create Table consumption (
-  consumption_date date not null,
+Create Table IF NOT EXISTS consumption (
+  consumption_date date not null Primary key,
   dev_id int not null,
   kwatt float
 );
 
-Create Table device (
-  dev_id int not null,
+Create Table IF NOT EXISTS device (
+  dev_id int not null Primary Key,
   name varchar(255),
   customer_Id int,
 );
 
-Create Table baseline (
-  dev_id int not null,
+Create Table IF NOT EXISTS baseline (
+  dev_id int not null Primary Key,
   kwatt float
 );
 
-Create Table customer (
-  customer_Id int not null,
+Create Table IF NOT EXISTS customer (
+  customer_Id int not null Primary Key,
   fname varchar(255),
   lname varchar(255),
   email varchar(255),
   state_id varchar(255)
 );
 
-Create Table region (
-  state_id varchar(255) not null,
+Create Table IF NOT EXISTS region (
+  state_id varchar(255) not null Primary Key,
   region  varchar(255)
 );
